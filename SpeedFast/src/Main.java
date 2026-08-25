@@ -1,18 +1,39 @@
 public class Main {
+
     public static void main(String[] args) {
-        Pedido comida = new PedidoComida(1, "Av. Providencia 100");
-        Pedido encomienda = new PedidoEncomienda(2, "Av. Apoquindo 200");
-        Pedido express = new PedidoExpress(3, "Av. Vitacura 300");
 
-        comida.asignarRepartidor();
-        comida.asignarRepartidor("Juan Pérez");
+        Pedido comida = new PedidoComida(
+                1,
+                "Av. Italia 456",
+                4
+        );
+
+        Pedido encomienda = new PedidoEncomienda(
+                2,
+                "Av. Independencia 123",
+                6
+        );
+
+        Pedido express = new PedidoExpress(
+                3,
+                "Av. Apoquindo 1500",
+                7
+        );
+
+        comida.mostrarResumen();
+        System.out.println("Tiempo estimado de entrega: "
+                + comida.calcularTiempoEntrega() + " minutos");
+
         System.out.println();
 
-        encomienda.asignarRepartidor();
-        encomienda.asignarRepartidor("Camila Soto");
+        encomienda.mostrarResumen();
+        System.out.println("Tiempo estimado de entrega: "
+                + encomienda.calcularTiempoEntrega() + " minutos");
+
         System.out.println();
 
-        express.asignarRepartidor();
-        express.asignarRepartidor("Luis Díaz");
+        express.mostrarResumen();
+        System.out.println("Tiempo estimado de entrega: "
+                + express.calcularTiempoEntrega() + " minutos");
     }
 }
