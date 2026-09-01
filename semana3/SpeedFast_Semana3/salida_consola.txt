@@ -1,0 +1,35 @@
+=== SPEEDFAST - SEMANA 3 ===
+
+[Pedido Comida]
+-> Verificando mochila t?rmica... OK
+-> Pedido asignado autom?ticamente a Juan P?rez
+Pedido #001
+Direcci?n: Av. Italia 456
+Distancia: 4.0 km
+Repartidor asignado: Juan P?rez
+Tiempo estimado: 23 minutos
+-> Pedido despachado correctamente.
+
+[Pedido Encomienda]
+-> Repartidor asignado manualmente: Daniela Tapia
+Pedido #002
+Direcci?n: Av. Independencia 123
+Distancia: 6.0 km
+Repartidor asignado: Daniela Tapia
+Tiempo estimado: 29 minutos
+-> Pedido despachado correctamente.
+
+[Pedido Express]
+-> Buscando repartidor m?s cercano... OK
+-> Pedido asignado autom?ticamente a Luis D?az
+Pedido #003
+Direcci?n: Av. Apoquindo 1500
+Distancia: 7.0 km
+Repartidor asignado: Luis D?az
+Tiempo estimado: 15 minutos
+-> Pedido #003 cancelado exitosamente.
+
+=== HISTORIAL ===
+- PedidoComida #001 - Despachado por Juan P?rez
+- PedidoEncomienda #002 - Despachado por Daniela Tapia
+- PedidoExpress #003 - Cancelado por Luis D?az
