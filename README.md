@@ -1,57 +1,80 @@
-# SpeedFast
+# SpeedFast - Semana 3
 
-Proyecto desarrollado para la asignatura **Desarrollo Orientado a Objetos II – Semana 2**.
+Proyecto desarrollado para la asignatura **Desarrollo Orientado a Objetos II**.
 
 ## Descripción
 
-SpeedFast es un sistema de gestión de pedidos desarrollado en **Java**, que permite representar distintos tipos de servicios de reparto y calcular sus tiempos estimados de entrega.
+SpeedFast es un sistema de gestión de pedidos desarrollado en Java.  
+Esta versión integra conceptos de programación orientada a objetos como herencia, polimorfismo, abstracción e interfaces.
 
-En esta segunda etapa se aplican conceptos de **Programación Orientada a Objetos**, principalmente:
+El sistema permite gestionar tres tipos de pedidos:
 
-- Abstracción.
-- Herencia.
-- Polimorfismo.
-- Sobrescritura de métodos.
-- Clases y métodos abstractos.
-
-## Tipos de pedidos
-
-El sistema contempla tres tipos de pedidos:
-
-- **PedidoComida:** tiempo base de 15 minutos + 2 minutos por kilómetro.
-- **PedidoEncomienda:** tiempo base de 20 minutos + 1,5 minutos por kilómetro.
-- **PedidoExpress:** tiempo base de 10 minutos y agrega 5 minutos si la distancia supera los 5 km.
-
-## Clases principales
-
-- `Pedido` - Clase abstracta base.
-- `PedidoComida`
-- `PedidoEncomienda`
-- `PedidoExpress`
-- `Main`
+- Pedido de comida
+- Pedido de encomienda
+- Pedido express
 
 ## Funcionalidades
 
-La clase abstracta `Pedido` contiene los datos comunes:
+- Asignación automática de repartidores.
+- Asignación manual de repartidores.
+- Cálculo del tiempo estimado de entrega.
+- Despacho de pedidos.
+- Cancelación de pedidos.
+- Registro y visualización del historial de entregas.
 
-- ID del pedido.
-- Dirección de entrega.
-- Distancia en kilómetros.
+## Programación Orientada a Objetos
 
-Cada tipo de pedido implementa su propia versión del método `calcularTiempoEntrega()`.
+### Abstracción
 
-El programa también utiliza `mostrarResumen()` para presentar los datos principales de cada pedido.
+Se utiliza la clase abstracta `Pedido`, que contiene los atributos y comportamientos comunes de los pedidos.
+
+Incluye:
+
+- Método implementado `mostrarResumen()`.
+- Método abstracto `calcularTiempoEntrega()`.
+
+### Herencia
+
+Las siguientes clases heredan de `Pedido`:
+
+- `PedidoComida`
+- `PedidoEncomienda`
+- `PedidoExpress`
+
+### Polimorfismo
+
+Cada tipo de pedido sobrescribe métodos para adaptar su comportamiento.
+
+También se utiliza sobrecarga mediante:
+
+- `asignarRepartidor()`
+- `asignarRepartidor(String nombre)`
+
+### Interfaces
+
+El proyecto implementa las interfaces solicitadas:
+
+- `Despachable` → `despachar()`
+- `Cancelable` → `cancelar()`
+- `Rastreable` → `verHistorial()`
 
 ## Ejecución
 
-El proyecto fue desarrollado y probado utilizando **IntelliJ IDEA** y **Java**.
+La clase `Main` realiza una simulación de los diferentes tipos de pedidos, mostrando:
 
-Ejemplo de resultados:
+1. Asignación de repartidores.
+2. Tiempo estimado de entrega.
+3. Despacho.
+4. Cancelación.
+5. Historial de pedidos.
 
-- PedidoComida: 23 minutos.
-- PedidoEncomienda: 29 minutos.
-- PedidoExpress: 15 minutos.
+## Tecnologías
 
-## Autor
+- Java
+- IntelliJ IDEA
+- Git
+- GitHub
 
-**Javiera Saavedra**
+## Autora
+
+Javiera Saavedra
